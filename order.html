@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order Online | Varney-Snack-Shack</title>
+    <meta
+      name="description"
+      content="Order Varney-Snack-Shack favorites online with secure payments and pickup or delivery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Varney<span>-</span>Snack<span>-</span>Shack</div>
+      <nav class="nav">
+        <a href="index.html#story">Home</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="about.html">About</a>
+        <a href="order.html">Order</a>
+        <a href="index.html#visit">Visit</a>
+      </nav>
+      <a class="btn btn-outline" href="order.html">Order Now</a>
+    </header>
+
+    <main>
+      <section class="section order-hero">
+        <div class="section-header">
+          <h1>Order Online</h1>
+          <p>
+            Build your cart, choose pickup or delivery, and pay securely with the
+            payment method that works best for you.
+          </p>
+        </div>
+      </section>
+
+      <section class="section order-grid">
+        <div class="order-menu">
+          <div class="order-toolbar">
+            <h2>Menu for Ordering</h2>
+            <p>Tap “Add” to build your cart in seconds.</p>
+          </div>
+          <div class="menu-grid" id="order-menu-grid"></div>
+        </div>
+
+        <aside class="order-cart">
+          <h2>Your Cart</h2>
+          <div id="cart-items" class="cart-items"></div>
+          <div class="cart-summary">
+            <div class="cart-line">
+              <span>Subtotal</span>
+              <strong id="cart-subtotal">$0.00</strong>
+            </div>
+            <div class="cart-line">
+              <span>Estimated tax</span>
+              <strong id="cart-tax">$0.00</strong>
+            </div>
+            <div class="cart-line total">
+              <span>Total</span>
+              <strong id="cart-total">$0.00</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section checkout">
+        <div class="checkout-card">
+          <h2>Checkout</h2>
+          <form id="checkout-form" class="checkout-form">
+            <div class="form-row">
+              <label>
+                Full name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Phone number
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Service type
+                <select name="service" id="service-type">
+                  <option value="pickup">Pickup</option>
+                  <option value="delivery">Delivery</option>
+                </select>
+              </label>
+              <label>
+                Time
+                <input type="time" name="time" required />
+              </label>
+            </div>
+            <label id="address-field" class="hidden">
+              Delivery address
+              <input type="text" name="address" placeholder="Street, City, Zip" />
+            </label>
+            <label>
+              Order notes
+              <textarea name="notes" rows="3" placeholder="Allergies, extra sauce, etc."></textarea>
+            </label>
+
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              <div id="summary-items" class="summary-items"></div>
+              <div class="summary-total">
+                <span>Total due</span>
+                <strong id="summary-total">$0.00</strong>
+              </div>
+            </div>
+
+            <div class="payment-section">
+              <h3>Pay Securely</h3>
+              <p class="muted">
+                Choose your payment provider. Buttons go live once connected with your
+                merchant accounts.
+              </p>
+              <div class="payment-grid">
+                <button type="button" class="btn payment-btn" data-method="stripe">
+                  Pay with Stripe
+                </button>
+                <button type="button" class="btn payment-btn" data-method="paypal">
+                  Pay with PayPal
+                </button>
+                <button type="button" class="btn payment-btn" data-method="venmo">
+                  Pay with Venmo
+                </button>
+                <button type="button" class="btn payment-btn" data-method="cashapp">
+                  Pay with Cash App
+                </button>
+                <button type="button" class="btn payment-btn" data-method="square">
+                  Pay with Square
+                </button>
+                <button type="button" class="btn payment-btn" data-method="card">
+                  Card Payment
+                </button>
+              </div>
+              <div id="payment-status" class="payment-status"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Varney-Snack-Shack. Crafted with heat and heart.</p>
+      <p>Designed and developed by BCodeStack</p>
+    </footer>
+
+    <script src="order.js"></script>
+  </body>
+</html>
