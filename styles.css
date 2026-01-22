@@ -313,6 +313,19 @@ img {
   gap: 6px;
 }
 
+.panel-link {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.panel-link:hover {
+  color: var(--red-soft);
+}
+
 .panel-row span {
   color: var(--white-muted);
   font-size: 0.85rem;
