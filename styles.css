@@ -52,16 +52,14 @@ img {
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  max-width: 220px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.logo img {
-  width: 100%;
-  height: auto;
-  display: block;
+.logo span {
+  color: var(--red);
 }
 
 .nav {
