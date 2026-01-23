@@ -401,6 +401,35 @@ img {
 
 .order-hero .section-header {
   margin-bottom: 0;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 32px;
+  align-items: center;
+}
+
+.order-hero-text h1 {
+  margin-bottom: 12px;
+}
+
+.order-hero-media {
+  margin: 0;
+  justify-self: end;
+  text-align: right;
+}
+
+.order-hero-media img {
+  width: min(100%, 420px);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  display: block;
+  margin-left: auto;
+}
+
+.order-hero-media figcaption {
+  margin-top: 12px;
+  color: var(--white-muted);
+  font-size: 0.95rem;
 }
 
 .order-grid {
@@ -584,6 +613,20 @@ img {
   .nav {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .order-hero .section-header {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .order-hero-media {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .order-hero-media img {
+    margin-left: 0;
   }
 }
 
